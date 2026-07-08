@@ -10,10 +10,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Setup Gradle
+      - name: Install Gradle
         uses: gradle/actions/setup-gradle@v4
-      - name: Build with Gradle
-        run: chmod +x gradlew && ./gradlew build
+      - name: Build with System Gradle
+        run: gradle build
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
